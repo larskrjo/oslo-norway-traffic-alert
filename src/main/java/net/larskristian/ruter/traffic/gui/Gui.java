@@ -9,10 +9,25 @@ import javax.swing.*;
  */
 public class Gui extends JFrame {
 
+    private JLabel label;
+
     public Gui() {
-        setTitle(Constants.TITLE);
-        setSize(Constants.WIDTH, Constants.HEIGHT);
+        setup();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }
+
+    private void setup() {
+        setTitle(Constants.TITLE);
+        setSize(Constants.WIDTH, Constants.HEIGHT);
+
+        // Add panel with info
+        label = new JLabel("default value");
+        add(label);
+    }
+
+    public JLabel getLabel() {
+        return label;
+    }
+
 }
